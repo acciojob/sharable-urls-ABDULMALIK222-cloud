@@ -1,4 +1,7 @@
-const app = require("./index.js");
-app.listen(3000, () => {
-  console.log('server started');
-});
+// your code here
+document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            var queryString = document.getElementById('query').value;
+            var urlElement = document.getElementById('url');
+            urlElement.textContent = urlElement.textContent + '?' + queryString;
+        });
